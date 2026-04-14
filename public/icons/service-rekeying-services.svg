@@ -1,0 +1,9 @@
+<svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Primary Key (new key) -->
+  <rect x="8" y="14" width="12" height="20" rx="6" ry="6" fill="#d6b328"/>
+  <path fill="#d6b328" d="M20 18 H38 V21 H40 V18 H42 V30 H40 V27 H38 V30 H20 V18 Z"/>
+
+  <!-- Secondary Key (old key, slightly offset and behind) -->
+  <rect x="12" y="18" width="12" height="20" rx="6" ry="6" fill="#217443"/>
+  <path fill="#217443" d="M24 22 H42 V25 H44 V22 H46 V34 H44 V31 H42 V34 H24 V22 Z"/>
+</svg>

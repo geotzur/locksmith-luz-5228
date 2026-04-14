@@ -1,0 +1,10 @@
+<svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lock body - primary fill -->
+  <rect x="16" y="12" width="16" height="24" fill="#d6b328"/>
+  <!-- Smart indicator / sensor - secondary fill -->
+  <circle cx="24" cy="18" r="4" fill="#217443"/>
+  <!-- WiFi signal arc 1 - secondary stroke -->
+  <path d="M 18 8 Q 24 4 30 8" stroke="#217443" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- WiFi signal arc 2 - secondary stroke -->
+  <path d="M 16 10 Q 24 0 32 10" stroke="#217443" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
