@@ -58,7 +58,13 @@ export default function Header() {
                     key={link.label}
                     className="relative"
                     onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
+                    onMouseLeave={(e) => {
+                      // Only close if the related target is outside this container
+                      const container = e.currentTarget;
+                      if (!container.contains(e.relatedTarget as Node)) {
+                        setServicesOpen(false);
+                      }
+                    }}
                   >
                     <button
                       className={`nav-link font-display text-[13px] font-medium uppercase tracking-wider transition-colors duration-200 ${
@@ -68,16 +74,18 @@ export default function Header() {
                       {link.label} ▾
                     </button>
                     {servicesOpen && (
-                      <div className="absolute top-full left-0 mt-1 bg-white shadow-xl border border-[#d4e6db] rounded-sm py-2 w-64 z-50">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 font-body text-sm text-[#0d1a12] hover:bg-[#f5f9f6] hover:text-[#217443] transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 w-64 z-50 pt-1">
+                        <div className="bg-white shadow-xl border border-[#d4e6db] rounded-sm py-2">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-4 py-2.5 font-body text-sm text-[#0d1a12] hover:bg-[#f5f9f6] hover:text-[#217443] transition-colors"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>

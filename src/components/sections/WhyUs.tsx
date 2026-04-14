@@ -15,7 +15,7 @@ export default function WhyUs() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="bg-[#f5f9f6] py-12 md:py-20" ref={ref}>
+    <section id="whyus" className="bg-[#f5f9f6] py-12 md:py-20" ref={ref}>
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Section header */}
         <div

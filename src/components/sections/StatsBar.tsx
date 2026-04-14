@@ -50,7 +50,7 @@ export default function StatsBar() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
   return (
-    <section className="relative bg-[#0f1e17] py-10 md:py-16 overflow-hidden" ref={ref}>
+    <section id="statsbar" className="relative bg-[#0f1e17] py-10 md:py-16 overflow-hidden" ref={ref}>
       {/* Floating blobs */}
       <div className="blob blob-green absolute w-80 h-80 -left-20 -top-20" style={{ opacity: 0.07 }} />
       <div className="blob blob-gold absolute w-64 h-64 right-0 bottom-0" style={{ opacity: 0.06 }} />
